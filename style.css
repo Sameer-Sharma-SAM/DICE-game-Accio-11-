@@ -1,0 +1,110 @@
+ /* Casino / Gamble Theme */
+
+/* Background */
+body {
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  letter-spacing: 1px;
+}
+
+/* Player container like casino cards */
+div {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #ff1744;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 23, 68, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+div:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 25px #ff1744, 0 0 45px #ff4081;
+}
+
+/* Input = player name */
+input {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 10px;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+  background: #111;
+  color: #ffeb3b;
+  border: 1px solid #ffeb3b;
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 12px #ffeb3b;
+  border-color: #ff4081;
+}
+
+/* Casino-style button */
+button {
+  background: linear-gradient(135deg, #ff1744, #ff9100);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff9100, #ff1744);
+  transform: scale(1.15);
+  box-shadow: 0 0 20px #ff9100, 0 0 40px #ff1744;
+}
+
+/* Dice result number */
+.result {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 12px;
+  background: #111;
+  color: #00ffea;
+  border: 2px solid #00ffea;
+  animation: flicker 1.5s infinite alternate;
+}
+
+/* Winner heading */
+h1 {
+  margin-top: 40px;
+  font-size: 34px;
+  text-align: center;
+  color: #ffeb3b;
+  text-shadow: 0 0 12px #ffeb3b, 0 0 25px #ff5722, 0 0 40px #f44336;
+  animation: neonPulse 1.5s infinite alternate;
+}
+
+/* Animations */
+@keyframes flicker {
+  from { opacity: 1; text-shadow: 0 0 5px #00ffea, 0 0 15px #00ffea; }
+  to   { opacity: 0.8; text-shadow: 0 0 10px #00e5ff, 0 0 30px #00e5ff; }
+}
+
+@keyframes neonPulse {
+  from { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ff9100; }
+  to   { text-shadow: 0 0 20px #ff5722, 0 0 40px #ff1744; }
+}
